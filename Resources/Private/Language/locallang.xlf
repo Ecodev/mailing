@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="" product-name="local lang module">
+		<header/>
+		<body>
+
+			<!-- Wizard -->
+			<trans-unit id="wizard.title">
+				<source>Versatile and Interactive Display - List Component</source>
+			</trans-unit>
+			<trans-unit id="wizard.description">
+				<source>Generic List Component where content can be filtered in an advanced way... Veni, vidi, vici!</source>
+			</trans-unit>
+
+			<!-- Settings -->
+			<trans-unit id="flexform.tab.source">
+				<source>Source</source>
+			</trans-unit>
+			<trans-unit id="flexform.tab.grid">
+				<source>Grid</source>
+			</trans-unit>
+			<trans-unit id="flexform.tab.facets">
+				<source>Facets</source>
+			</trans-unit>
+			<trans-unit id="flexform.tab.detailView">
+				<source>Detail view</source>
+			</trans-unit>
+			<trans-unit id="flexform.tab.massActions">
+				<source>Mass actions</source>
+			</trans-unit>
+			<trans-unit id="settings.select">
+				<source>Select one...</source>
+			</trans-unit>
+			<trans-unit id="settings.contentType">
+				<source>Content Type</source>
+			</trans-unit>
+			<trans-unit id="settings.numberOfItems">
+				<source>Menu "number of records"</source>
+			</trans-unit>
+			<trans-unit id="settings.columns">
+				<source>Columns. Attention! Some columns may not work on the Frontend out of the box. Override in TCA['grid_frontend'] in case.</source>
+			</trans-unit>
+			<trans-unit id="settings.selection">
+				<source>Selection coming from the Backend module to be used as pre-filter</source>
+			</trans-unit>
+			<trans-unit id="settings.facets">
+				<source>Pick available Facets to be displayed the Visual Search bar.</source>
+			</trans-unit>
+			<trans-unit id="settings.logicalSeparator">
+				<source>Logical separator between facets</source>
+			</trans-unit>
+			<trans-unit id="settings.isVisualSearchBar">
+				<source>Display the Visual Search bar to search by facets.</source>
+			</trans-unit>
+			<trans-unit id="settings.loadContentByAjax">
+				<source>Load content by Ajax e.g. for long lists. Implicitly set if the Visual Search bar is activated.</source>
+			</trans-unit>
+			<trans-unit id="settings.templateForDetailView">
+				<source>Template for the "detail" view. If let blank, no link to a detail view will be made.</source>
+			</trans-unit>
+			<trans-unit id="settings.hasClickOnRow">
+				<source>Enable click on row.</source>
+			</trans-unit>
+			<trans-unit id="settings.targetPageDetail">
+				<source>Target page for detail view. Let blank for current page.</source>
+			</trans-unit>
+			<trans-unit id="settings.parameterPrefix">
+				<source>Parameter prefix and name for detail view, example value tx_plugin_pi1|showUid. If let empty, default is "tx_vidifrontend_pi1".</source>
+			</trans-unit>
+			<trans-unit id="settings.limit">
+				<source>Max limit of records (0 means not limit)</source>
+			</trans-unit>
+			<trans-unit id="settings.sorting">
+				<source>Default sorting</source>
+			</trans-unit>
+			<trans-unit id="settings.direction">
+				<source>Default direction</source>
+			</trans-unit>
+			<trans-unit id="settings.additionalEquals">
+				<source><![CDATA[Additional constraints with possible operators = , >, >= , < , <=, like, in. Use one constraint per line.]]></source>
+			</trans-unit>
+			<trans-unit id="settings.gridClassName">
+				<source>Grid class name</source>
+			</trans-unit>
+			<trans-unit id="settings.hasColumnHeaders">
+				<source>Display column headers</source>
+			</trans-unit>
+			<trans-unit id="settings.actions">
+				<source>Actions</source>
+			</trans-unit>
+			<trans-unit id="settings.gridConfiguration">
+				<source>Grid configuration</source>
+			</trans-unit>
+			<trans-unit id="settings.enableFields">
+				<source>Respect enabled fields</source>
+			</trans-unit>
+			<trans-unit id="info.gridConfiguration">
+				<source>To address the customising issue, DataTables takes inspiration from the CSS 3 Advanced Layout Module. Please
+					refer to the %s section for more insight. Pay attention, the configuration is automatically updated when activating the VisualSearch bar in the Facets tab unless you have customized it. The built-in options available are:</source>
+			</trans-unit>
+
+			<!-- Frontend -->
+			<trans-unit id="link.showDetail">
+				<source>Show detail</source>
+			</trans-unit>
+			<trans-unit id="grid.processing">
+				<source>Processing...</source>
+			</trans-unit>
+			<trans-unit id="grid.searchPlaceholder">
+				<source>Search...</source>
+			</trans-unit>
+			<trans-unit id="grid.lengthMenu">
+				<source>Show _MENU_</source>
+			</trans-unit>
+			<trans-unit id="grid.info">
+				<source>Showing _START_ to _END_ of _TOTAL_ entries</source>
+			</trans-unit>
+			<trans-unit id="grid.infoEmpty">
+				<source>Showing 0 to 0 of 0 entries</source>
+			</trans-unit>
+			<trans-unit id="grid.infoFiltered">
+				<source>(filtered from _MAX_ total entries)</source>
+			</trans-unit>
+			<trans-unit id="grid.loadingRecords">
+				<source>Loading...</source>
+			</trans-unit>
+			<trans-unit id="grid.zeroRecords">
+				<source>No matching records found</source>
+			</trans-unit>
+			<trans-unit id="grid.emptyTable">
+				<source>No data available in table</source>
+			</trans-unit>
+
+			<trans-unit id="grid.paginate.first">
+				<source>First</source>
+			</trans-unit>
+			<trans-unit id="grid.paginate.previous">
+				<source>Previous</source>
+			</trans-unit>
+			<trans-unit id="grid.paginate.next">
+				<source>Next</source>
+			</trans-unit>
+			<trans-unit id="grid.paginate.last">
+				<source>Last</source>
+			</trans-unit>
+
+			<trans-unit id="grid.aria.sortAscending">
+				<source>: activate to sort column ascending</source>
+			</trans-unit>
+			<trans-unit id="grid.aria.sortDescending">
+				<source>: activate to sort column descending</source>
+			</trans-unit>
+			<trans-unit id="grid.lengthMenu.all">
+				<source>All</source>
+			</trans-unit>
+			<trans-unit id="grid.rows.selected">
+				<source>For selected rows (%s)</source>
+			</trans-unit>
+			<trans-unit id="grid.rows.all">
+				<source>For all rows (%s)</source>
+			</trans-unit>
+			<trans-unit id="grid.rows">
+				<source>For all rows</source>
+			</trans-unit>
+			<trans-unit id="export.xls">
+				<source>Export XLS</source>
+			</trans-unit>
+			<trans-unit id="export.xml">
+				<source>Export XML</source>
+			</trans-unit>
+			<trans-unit id="export.csv">
+				<source>Export CSV</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,25 @@
+{
+	"name": "fab/mailing",
+	"type": "typo3-cms-extension",
+	"description": "Define and assign list of recipients in the plugin settings. Users can send bunch of messages to them on the FE.",
+	"homepage": "https://github.com/Ecodev/mailing",
+	"license": [
+		"GPL-2.0+"
+	],
+	"keywords": [
+		"TYPO3 CMS",
+		"Mailing list"
+	],
+	"support": {
+		"issues": "https://github.com/Ecodev/mailing/issues"
+	},
+	"autoload": {
+		"psr-4": {
+			"Fab\\Mailing\\": "Classes/"
+		}
+	},
+	"replace": {
+		"mailing": "self.version",
+		"typo3-ter/mailing": "self.version"
+	}
+}
