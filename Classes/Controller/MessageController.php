@@ -37,61 +37,55 @@ class MessageController extends ActionController
     /**
      * @param string $subject
      * @param string $body
-     * @throws \TYPO3\CMS\Extbase\Mvc\Exception\UnsupportedRequestTypeException
      * @validate $subject \Fab\Mailing\Domain\Validator\HoneyPotValidator
+     * @validate $subject \Fab\Mailing\Domain\Validator\NotEmptyValidator
+     * @validate $body \Fab\Mailing\Domain\Validator\NotEmptyValidator
+     * @throws \TYPO3\CMS\Extbase\Mvc\Exception\UnsupportedRequestTypeException
+     * @throws \InvalidArgumentException
+     * @throws \TYPO3\CMS\Extbase\SignalSlot\Exception\InvalidSlotException
+     * @throws \TYPO3\CMS\Extbase\SignalSlot\Exception\InvalidSlotReturnException
+     * @throws \TYPO3\CMS\Extbase\Mvc\Exception\StopActionException
      */
     public function sendAction($subject, $body)
     {
 
         /** @var RecipientService $recipientService */
         $recipientService = GeneralUtility::makeInstance(RecipientService::class, $this->settings['selection']);
+        $numberOfSentEmails = 0;
         foreach ($recipientService->findRecipients() as $recipient) {
 
-//            $templateIdentifier = 1; // uid
-//            $layoutIdentifier = 1; // uid
-//            $recipients = array('john@doe.com' => 'John Doe');
-//            $markers = array(
-//                'first_name' => 'John',
-//                'last_name' => 'Doe',
-//            );
-//            $languageIdentifier = 0; // sys_language_uid
-//            $pathToFile = 'some-path-to-file'; // @todo replace me with FAL identifier
-//
-//            /** @var Message $message */
-//            $message = $this->objectManager->get(Message::class);
-//
-//            # Minimum required to be set
-//            $message->setMessageTemplate($templateIdentifier)
-//                ->setTo($recipient->getEmail);
 
-//            # Additional setter
-//            $message->assign('recipient', $recipient->toArray())
-//            ->setLanguage($languageIdentifier)
-//            ->addAttachment($pathToFile)
-//            ->setMessageLayout($layoutIdentifier);
+            if ($recipient['email']) {
+                $numberOfSentEmails++;
+
+
+                /** @var Message $message */
+                $message = $this->objectManager->get(Message::class);
 //
-//            # Possible debug before sending.
-//            # var_dump($message->toArray());
+//                # Minimum required to be set
+//                $message->setMessageTemplate($templateIdentifier)
+//                    ->setTo($recipient->getEmail);
 //
-//            # Send the email...
-//            $isSent = $message->send();
+//                # Additional setter
+//                $message
+//                    // ->assign('recipient', $recipient->toArray()) could be a security risk => expose
+//                    ->setMessageLayout($layoutIdentifier);
+            }
+
         }
 
-
-//
-//        var_dump($subject);
-//        var_dump($body);
-//        var_dump($this->settings);
-//        exit();
-        $this->redirect('feedback');
+        $this->redirect('feedback', null, null, ['numberOfSentEmails' => $numberOfSentEmails]);
     }
 
     /**
-     * @return void
+     * @param int $numberOfSentEmails
      */
-    public function feedbackAction()
+    public function feedbackAction($numberOfSentEmails)
     {
-
+        /** @var RecipientService $recipientService */
+        $recipientService = GeneralUtility::makeInstance(RecipientService::class, $this->settings['selection']);
+        $this->view->assign('numberOfSentEmails', (int)$numberOfSentEmails);
+        $this->view->assign('numberOfRecipients', (int)$recipientService->countRecipients());
     }
 
 }
