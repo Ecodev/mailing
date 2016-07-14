@@ -49,11 +49,7 @@ class DevelopmentViewHelper extends AbstractViewHelper
      * @return bool
      */
     public function isSenderOk(array $settings) {
-        $isOk = true;
-        if ($this->hasEmails($settings)) {
-            $isOk = !empty($settings['emailFrom']) || !empty($GLOBALS['TYPO3_CONF_VARS']['MAIL']['defaultMailFromAddress']);
-        }
-        return $isOk;
+        return !empty($settings['emailFrom']) || !empty($GLOBALS['TYPO3_CONF_VARS']['MAIL']['defaultMailFromAddress']);
     }
 
     /**

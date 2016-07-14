@@ -6,14 +6,17 @@
 
 <f:section name="main">
 
-	<f:form action="send" controller="Mailing" additionalAttributes="{role: 'form'}" method="post">
+	<f:if condition="{ml:context.isDevelopment()}">
+		<f:render section="FormError" partial="Form/Error" arguments="{_all}"/>
+	</f:if>
+
+	<f:form action="send" additionalAttributes="{role: 'form'}" method="post">
 
 		<div>
 			<strong>{numberOfRecipients} {f:translate(key: 'recipients') -> f:format.case(mode: 'lower')}</strong>
-			<f:debug>{settings}</f:debug>
 			<f:if condition="settings.displayRecipients">
 				<span>-</span>
-				<a href="" data-toggle="collapse" data-target="#list-recipients">
+				<a href="#" onclick="return false" data-toggle="collapse" data-target="#list-recipients">
 					{f:translate(key:'action.displayRecipients') -> f:format.case(mode: 'lower')} &raquo;
 				</a>
 			</f:if>
@@ -35,12 +38,19 @@
 
 		<div class="form-group">
 			<label for="mailing-subject">{f:translate(key: 'subject')}</label>
-			<input type="email" class="form-control" id="mailing-subject" placeholder="Subject">
+			<f:form.textfield class="form-control"
+			                  name="subject"
+			                  id="mailing-subject"
+			                  placeholder="{f:translate(key: 'subject')}"/>
 		</div>
 
 		<div class="form-group">
 			<label for="mailing-body">{f:translate(key: 'body')}</label>
-			<textarea id="mailing-body" class="form-control" rows="3"></textarea>
+			<f:form.textarea class="form-control"
+			                 name="body"
+			                 style="min-height: 100px"
+			                 id="mailing-body"
+			                 placeholder="{f:translate(key: 'body')}"/>
 		</div>
 		<button type="submit" class="btn btn-default">{f:translate(key: 'send')}</button>
 

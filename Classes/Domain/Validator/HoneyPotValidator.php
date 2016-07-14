@@ -14,7 +14,6 @@ namespace Fab\Mailing\Domain\Validator;
  * The TYPO3 project - inspiring people to share!
  */
 
-use Fab\Mailing\Service\TemplateService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Validation\Validator\AbstractValidator;
 
@@ -49,14 +48,6 @@ class HoneyPotValidator extends AbstractValidator
         if (GeneralUtility::getIndpEnv('HTTP_USER_AGENT') == "") {
             die('No user agent - u sure you are not a bot?');
         }
-    }
-
-    /**
-     * @return TemplateService
-     */
-    protected function getTemplateService()
-    {
-        return GeneralUtility::makeInstance(TemplateService::class);
     }
 
 }
