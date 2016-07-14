@@ -4,12 +4,12 @@
 
 plugin.tx_mailing {
 	view {
-		templateRootPath = {$plugin.tx_mailing.view.templateRootPath}
-		partialRootPath = {$plugin.tx_mailing.view.partialRootPath}
-		layoutRootPath = {$plugin.tx_mailing.view.layoutRootPath}
+		templateRootPaths.0 = {$plugin.tx_mailing.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_mailing.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_mailing.view.layoutRootPath}
 	}
 
 	settings {
-		sourceContentType = fe_users
+		contentTypeSelection = fe_users
 	}
 }

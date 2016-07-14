@@ -5,15 +5,15 @@ if (!defined('TYPO3_MODE')) {
 
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-    'Ecodev.mailing',
-    'Mail',
+    'Fab.mailing',
+    'Message',
     [
-        'Mailer' => 'index, send, feedback',
+        'Message' => 'compose, send, feedback',
 
     ],
     // non-cacheable actions
     [
-        'Mailer' => 'index, send, feedback',
+        'Message' => 'compose, send, feedback',
     ]
 );
 

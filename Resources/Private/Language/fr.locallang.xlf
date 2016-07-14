@@ -4,7 +4,56 @@
 		<header/>
 		<body>
 
-			
+			<!-- Wizard -->
+			<trans-unit id="wizard.title">
+				<target>Mailing List</target>
+			</trans-unit>
+			<trans-unit id="wizard.description">
+				<target>Define and assign list of recipients in the plugin settings. Users can send bunch of messages to them on the FE.</target>
+			</trans-unit>
+
+			<!-- Settings -->
+			<trans-unit id="flexform.tab.general">
+				<target>Général</target>
+			</trans-unit>
+			<trans-unit id="flexform.tab.sender">
+				<target>Expéditeur</target>
+			</trans-unit>
+			<trans-unit id="flexform.tab.display">
+				<target>Affichage</target>
+			</trans-unit>
+			<trans-unit id="settings.selection">
+				<target>List de destinataire - sélection depuis le module BE</target>
+			</trans-unit>
+			<trans-unit id="settings.recipientPreview">
+				<target>Aperçu des expéditeurs</target>
+			</trans-unit>
+			<trans-unit id="settings.displayRecipients">
+				<target>Afficher la liste des destinataires?</target>
+			</trans-unit>
+			<trans-unit id="message.notSavedYet">
+				<target>Veuillez sauvergarder les enregistrements.</target>
+			</trans-unit>
+			<trans-unit id="message.missingEmail">
+				<target>Pas d'email pour</target>
+			</trans-unit>
+
+			<!-- Frontend -->
+			<trans-unit id="subject">
+				<target>Sujet</target>
+			</trans-unit>
+			<trans-unit id="body">
+				<target>Contenu</target>
+			</trans-unit>
+			<trans-unit id="send">
+				<target>Envoyer</target>
+			</trans-unit>
+			<trans-unit id="recipients">
+				<target>Destinataires</target>
+			</trans-unit>
+			<trans-unit id="action.displayRecipients">
+				<target>Afficher les destinataires</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

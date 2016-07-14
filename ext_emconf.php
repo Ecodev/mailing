@@ -8,7 +8,7 @@ $EM_CONF[$_EXTKEY] = [
     'author_email' => 'fabien@ecodev',
     'module' => '',
     'state' => 'beta',
-    'version' => '0.9.0',
+    'version' => '0.1.0',
     'constraints' =>
         [
             'depends' =>
