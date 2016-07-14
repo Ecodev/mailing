@@ -4,6 +4,10 @@
 <f:layout name="Default"/>
 
 <f:section name="main">
-	Le message a été envoyé avec succès.
+
+	<f:link.page>{f:translate(key: 'back')}</f:link.page>
+	<div class="container-success">
+		{f:translate(key: 'message.success')} {numberOfSentEmails} / {numberOfRecipients}.
+	</div>
 </f:section>
 </html>

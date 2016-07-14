@@ -34,9 +34,6 @@
 			<trans-unit id="message.notSavedYet">
 				<source>Please, save this record to see this field.</source>
 			</trans-unit>
-			<trans-unit id="message.missingEmail">
-				<source>No email for</source>
-			</trans-unit>
 
 			<!-- Frontend -->
 			<trans-unit id="subject">
@@ -53,6 +50,15 @@
 			</trans-unit>
 			<trans-unit id="action.displayRecipients">
 				<source>Display recipients</source>
+			</trans-unit>
+			<trans-unit id="back">
+				<source>Back</source>
+			</trans-unit>
+			<trans-unit id="message.missingEmail">
+				<source>No email for</source>
+			</trans-unit>
+			<trans-unit id="message.success">
+				<source>Message has been sent to</source>
 			</trans-unit>
 		</body>
 	</file>

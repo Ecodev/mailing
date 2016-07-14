@@ -54,6 +54,12 @@
 			<trans-unit id="action.displayRecipients">
 				<target>Afficher les destinataires</target>
 			</trans-unit>
+			<trans-unit id="back">
+				<target>Retour</target>
+			</trans-unit>
+			<trans-unit id="message.success">
+				<source>Le message a été envoyé à</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
