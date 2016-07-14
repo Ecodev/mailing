@@ -24,11 +24,11 @@ class Wizard
      */
     function proc($wizardItems)
     {
-        $wizardItems['plugins_tx_mailing_mail'] = array(
+        $wizardItems['plugins_tx_mailing_message'] = array(
             'icon' => ExtensionManagementUtility::extRelPath('mailing') . 'Resources/Public/Images/Mailing.png',
             'title' => $this->getLanguageService()->sL('LLL:EXT:mailing/Resources/Private/Language/locallang.xlf:wizard.title'),
             'description' => $this->getLanguageService()->sL('LLL:EXT:mailing/Resources/Private/Language/locallang.xlf:wizard.description'),
-            'params' => '&defVals[tt_content][CType]=list&defVals[tt_content][list_type]=mailing_mail'
+            'params' => '&defVals[tt_content][CType]=list&defVals[tt_content][list_type]=mailing_messages'
         );
 
         return $wizardItems;
