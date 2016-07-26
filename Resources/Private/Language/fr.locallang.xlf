@@ -31,11 +31,20 @@
 			<trans-unit id="settings.displayRecipients">
 				<target>Afficher la liste des destinataires?</target>
 			</trans-unit>
+			<trans-unit id="settings.nameFrom">
+				<target>Nom par défaut - cette valuer sera remplacée par celle de l'utilisateur frontend si disponible.</target>
+			</trans-unit>
+			<trans-unit id="settings.emailFrom">
+				<target>Email par défaut - cette valuer sera remplacée par celle de l'utilisateur frontend si disponible.</target>
+			</trans-unit>
+			<trans-unit id="settings.parseToMarkdown">
+				<target>Interprète le contenu du massage en Markdown</target>
+			</trans-unit>
+			<trans-unit id="settings.layout">
+				<target>Layout pour enrober le message - ex. une signature automatique</target>
+			</trans-unit>
 			<trans-unit id="message.notSavedYet">
 				<target>Veuillez sauvergarder les enregistrements.</target>
-			</trans-unit>
-			<trans-unit id="message.missingEmail">
-				<target>Pas d'email pour</target>
 			</trans-unit>
 
 			<!-- Frontend -->
@@ -56,6 +65,9 @@
 			</trans-unit>
 			<trans-unit id="back">
 				<target>Retour</target>
+			</trans-unit>
+			<trans-unit id="message.missingEmail">
+				<target>Pas d'email pour</target>
 			</trans-unit>
 			<trans-unit id="message.success">
 				<source>Le message a été envoyé à</source>

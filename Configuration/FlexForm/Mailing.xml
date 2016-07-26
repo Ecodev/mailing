@@ -79,6 +79,33 @@
 							</config>
 						</TCEforms>
 					</settings.displayRecipients>
+					<settings.parseToMarkdown>
+						<TCEforms>
+							<label>LLL:EXT:mailing/Resources/Private/Language/locallang.xlf:settings.parseToMarkdown</label>
+							<config>
+								<type>check</type>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</settings.parseToMarkdown>
+					<settings.layout>
+						<TCEforms>
+							<label>LLL:EXT:mailing/Resources/Private/Language/locallang.xlf:settings.layout</label>
+							<config>
+								<type>select</type>
+								<foreign_table>tx_messenger_domain_model_messagelayout</foreign_table>
+								<size>1</size>
+								<minItems>0</minItems>
+								<maxItems>100</maxItems>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.layout>
 				</el>
 			</ROOT>
 		</display>

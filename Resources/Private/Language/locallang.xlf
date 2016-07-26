@@ -31,6 +31,18 @@
 			<trans-unit id="settings.displayRecipients">
 				<source>Show list of recipients?</source>
 			</trans-unit>
+			<trans-unit id="settings.nameFrom">
+				<source>Default name - value will be overridden from the Frontend User if available</source>
+			</trans-unit>
+			<trans-unit id="settings.emailFrom">
+				<source>Default email - value will be overridden from the Frontend User if available</source>
+			</trans-unit>
+			<trans-unit id="settings.parseToMarkdown">
+				<source>Parse body of message to Markdown</source>
+			</trans-unit>
+			<trans-unit id="settings.layout">
+				<source>Layout to wrap the message e.g. signature</source>
+			</trans-unit>
 			<trans-unit id="message.notSavedYet">
 				<source>Please, save this record to see this field.</source>
 			</trans-unit>
