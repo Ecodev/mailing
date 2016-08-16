@@ -26,11 +26,11 @@ class DevelopmentViewHelper extends AbstractViewHelper
      */
     public function render()
     {
-        $redirectTo = $this->getRedirectService()->redirectionForCurrentContext();
+        $redirectTo = $this->getRedirectService()->getRedirections();
         $output = '';
 
         // Means we want to redirect email.
-        if (!empty($redirectTo)) {
+        if (is_array($redirectTo) && $redirectTo) {
             $settings = $this->templateVariableContainer->get('settings');
 
             $output = sprintf(
