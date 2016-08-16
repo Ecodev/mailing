@@ -102,6 +102,8 @@ class RecipientService
     /**
      * @param Selection $selection
      * @return Matcher
+     * @throws \TYPO3\CMS\Extbase\SignalSlot\Exception\InvalidSlotReturnException
+     * @throws \TYPO3\CMS\Extbase\SignalSlot\Exception\InvalidSlotException
      * @throws \InvalidArgumentException
      */
     public function getMatcher(Selection $selection)
