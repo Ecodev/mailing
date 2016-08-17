@@ -10,6 +10,6 @@ plugin.tx_mailing {
 	}
 
 	settings {
-		contentTypeSelection = fe_users
+		selectionContentType = fe_users
 	}
 }

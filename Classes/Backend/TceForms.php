@@ -32,7 +32,7 @@ class TceForms
     {
         $configuration = $this->getPluginConfiguration();
 
-        if (0 === count($configuration) || empty($configuration['settings']['contentTypeSelection'])) {
+        if (!$configuration || empty($configuration['settings']['selectionContentType'])) {
             $parameters['items'][] = array('No template found. Forgotten to load the static TS template?', '', NULL);
         } else {
 
@@ -41,7 +41,7 @@ class TceForms
             /** @var SelectionRepository $selectionRepository */
             $selectionRepository = $this->getObjectManager()->get(SelectionRepository::class);
 
-            $contentType = $configuration['settings']['contentTypeSelection'];
+            $contentType = $configuration['settings']['selectionContentType'];
             if ($contentType) {
 
                 $selections = $selectionRepository->findForEveryone($contentType);
