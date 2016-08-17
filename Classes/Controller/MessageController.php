@@ -34,6 +34,8 @@ class MessageController extends ActionController
         $this->view->assign('settings', $this->settings);
         $this->view->assign('recipients', $recipientService->findRecipients());
         $this->view->assign('numberOfRecipients', $recipientService->countRecipients());
+        $this->view->assign('senderName', $this->getSenderName());
+        $this->view->assign('senderEmail', $this->getSenderEmail());
     }
 
     /**

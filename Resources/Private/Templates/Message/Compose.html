@@ -12,6 +12,13 @@
 
 	<f:form action="send" additionalAttributes="{role: 'form'}" method="post">
 
+		<f:if condition="settings.displaySender">
+			<div>
+				<strong>{f:translate(key: 'sender')}</strong>
+				<span>{senderName} &lt;{senderEmail}&gt;</span>
+			</div>
+		</f:if>
+
 		<div>
 			<strong>{numberOfRecipients} {f:translate(key: 'recipients') -> f:format.case(mode: 'lower')}</strong>
 			<f:if condition="settings.displayRecipients">

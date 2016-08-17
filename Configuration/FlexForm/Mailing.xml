@@ -70,6 +70,15 @@
 				</TCEforms>
 				<type>array</type>
 				<el>
+					<settings.displaySender>
+						<TCEforms>
+							<label>LLL:EXT:mailing/Resources/Private/Language/locallang.xlf:settings.displaySender</label>
+							<config>
+								<type>check</type>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</settings.displaySender>
 					<settings.displayRecipients>
 						<TCEforms>
 							<label>LLL:EXT:mailing/Resources/Private/Language/locallang.xlf:settings.displayRecipients</label>
