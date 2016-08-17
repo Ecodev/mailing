@@ -89,7 +89,12 @@ class MessageController extends ActionController
                     $message->setMessageLayout($this->settings['layout']);
                 }
 
-                $message->enqueue();
+                if ((bool)$this->settings['enqueue']) {
+                    $message->enqueue();
+                } else {
+                    $message->send();
+                }
+
             }
         }
 

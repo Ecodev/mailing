@@ -30,6 +30,15 @@
 							</config>
 						</TCEforms>
 					</settings.recipientPreview>
+					<settings.enqueue>
+						<TCEforms>
+							<label>LLL:EXT:mailing/Resources/Private/Language/locallang.xlf:settings.enqueue</label>
+							<config>
+								<type>check</type>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</settings.enqueue>
 				</el>
 			</ROOT>
 		</general>
