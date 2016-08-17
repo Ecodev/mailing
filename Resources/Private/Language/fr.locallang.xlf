@@ -54,6 +54,9 @@
 			<trans-unit id="body">
 				<target>Contenu</target>
 			</trans-unit>
+			<trans-unit id="sender">
+				<source>Expéditeur</source>
+			</trans-unit>
 			<trans-unit id="send">
 				<target>Envoyer</target>
 			</trans-unit>
