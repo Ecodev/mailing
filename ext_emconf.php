@@ -5,10 +5,13 @@ $EM_CONF[$_EXTKEY] = [
     'description' => 'Define and assign list of recipients in the plugin settings. Users can send bunch of messages to them on the FE.',
     'category' => 'plugin',
     'author' => 'Fabien Udriot',
-    'author_email' => 'fabien@ecodev',
+    'author_email' => 'fabien@ecodev.ch',
     'module' => '',
     'state' => 'beta',
     'version' => '0.1.0',
+    'autoload' => [
+        'psr-4' => ['Fab\\Mailing\\' => 'Classes']
+    ],
     'constraints' =>
         [
             'depends' =>
