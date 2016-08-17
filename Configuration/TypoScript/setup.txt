@@ -11,5 +11,12 @@ plugin.tx_mailing {
 
 	settings {
 		selectionContentType = fe_users
+
+		# Notice the possibles values::
+		#
+		# "*", means every authenticated User can send email. (default)
+		# "1,2", means every User belonging of Frontend Groups 1 and 2 are allowed.
+		# no value, everybody can send email. No authentication is required. Caution!!
+		allowedFrontendGroups = *
 	}
 }

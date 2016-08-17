@@ -22,6 +22,38 @@ class MessageController extends ActionController
 {
 
     /**
+     * Initialize actions. These actions are meant to be called by an logged-in FE User.
+     * @throws \RuntimeException
+     */
+    public function initializeAction()
+    {
+        // Perhaps it should go into a validator?
+        // Check permission before executing any action.
+        $allowedFrontendGroups = trim((string)$this->settings['allowedFrontendGroups']);
+        if ($allowedFrontendGroups === '*') {
+            if (!$this->getFrontendUser()->user) {
+                throw new \RuntimeException('FE User must be logged-in.', 1471442296);
+            }
+        } elseif ($allowedFrontendGroups !== '') {
+
+            $isAllowed = false;
+            $frontendGroups = GeneralUtility::trimExplode(',', $allowedFrontendGroups, true);
+            foreach ($frontendGroups as $frontendGroup) {
+                if (GeneralUtility::inList($this->getFrontendUser()->user['usergroup'], $frontendGroup)) {
+                    $isAllowed = true;
+                    break;
+                }
+            }
+
+            // Throw exception if not allowed
+            if (!$isAllowed) {
+                throw new \RuntimeException('FE User does not have enough permission.', 1471442297);
+            }
+        }
+
+    }
+
+    /**
      * @return void
      * @throws \TYPO3\CMS\Extbase\SignalSlot\Exception\InvalidSlotReturnException
      * @throws \TYPO3\CMS\Extbase\SignalSlot\Exception\InvalidSlotException
