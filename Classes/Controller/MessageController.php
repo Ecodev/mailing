@@ -94,7 +94,7 @@ class MessageController extends ActionController
         $numberOfSentEmails = 0;
 
         $mailingName = sprintf(
-            'Mailing sent by %s <%s>',
+            'Mailing #' . $GLOBALS['_SERVER']['REQUEST_TIME'],
             $this->getSenderName(),
             $this->getSenderEmail()
         );
