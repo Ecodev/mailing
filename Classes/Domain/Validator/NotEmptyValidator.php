@@ -8,7 +8,6 @@ namespace Fab\Mailing\Domain\Validator;
  * LICENSE.md file that was distributed with this source code.
  */
 
-use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Validation\Validator\AbstractValidator;
 
 /**
@@ -22,7 +21,7 @@ class NotEmptyValidator extends AbstractValidator
      */
     public function isValid($value)
     {
-        if (empty($value)) {
+        if (!trim($value)) {
             $this->addError('Empty field', 1468509656);
         }
     }
