@@ -93,15 +93,11 @@ class MessageController extends ActionController
         $recipientService = GeneralUtility::makeInstance(RecipientService::class, $this->settings['selection']);
         $numberOfSentEmails = 0;
 
-        $mailingName = sprintf(
-            'Mailing #' . $GLOBALS['_SERVER']['REQUEST_TIME'],
-            $this->getSenderName(),
-            $this->getSenderEmail()
-        );
+        $mailingName = 'Mailing #' . $GLOBALS['_SERVER']['REQUEST_TIME'];
 
         foreach ($recipientService->findRecipients() as $recipient) {
 
-            if ($recipient['email']) {
+            if (filter_var($recipient['email'], FILTER_VALIDATE_EMAIL)) {
                 $numberOfSentEmails++;
 
                 /** @var Message $message */
