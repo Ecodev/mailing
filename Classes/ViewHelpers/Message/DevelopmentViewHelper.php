@@ -48,7 +48,7 @@ class DevelopmentViewHelper extends AbstractViewHelper
      * @param array $settings
      * @return bool
      */
-    public function isSenderOk(array $settings) {
+    protected function isSenderOk(array $settings) {
         return !empty($settings['emailFrom']) || !empty($GLOBALS['TYPO3_CONF_VARS']['MAIL']['defaultMailFromAddress']);
     }
 
@@ -56,7 +56,7 @@ class DevelopmentViewHelper extends AbstractViewHelper
      * @return RedirectService
      * @throws \InvalidArgumentException
      */
-    public function getRedirectService() {
+    protected function getRedirectService() {
         return GeneralUtility::makeInstance(RedirectService::class);
     }
 
