@@ -5,8 +5,8 @@ Authenticated FE users can send bunch of messages to a list of recipients. This 
 
 When the user hits the sending button, Mailing is preparing and delegating
 the messages to [Messenger](https://github.com/fabarea/messenger) - which is a dependency. Messenger has a queue system to properly send mass emails and monitor the queue / sent emails. For that purpose, a scheduler task must be set up in the Scheduler module.
-For a small number of recipients, email can be sent directly and by pass the queue.
-This is configurable in the plugin settings in the BE.
+For a small number of recipients, emails can be sent directly and by pass the queue.
+All that is configurable in the plugin settings in the BE.
 
 ![](https://raw.githubusercontent.com/Ecodev/mailing/master/Documentation/Frontend-01.png)
 
