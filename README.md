@@ -1,20 +1,20 @@
 Mailing for TYPO3 CMS
 =====================
 
-Template based, render a variety of forms such as contact form, registration form, etc... effortless!
+Authenticated FE users can send bunch of messages to a list of recipients. This list is defined as a dynamic selection in a FE module ([Vidi](https://github.com/fabarea/vidi)).
 
-Consider these minimum steps to display a form and start submitting data:
+When the user hits the sending button, Mailing is preparing and delegating
+the messages to [Messenger](https://github.com/fabarea/messenger) - which is a dependency. Messenger has a queue system to properly send mass emails and monitor the queue / sent emails. For that purpose, a scheduler task must be set up in the Scheduler module.
+For a small number of recipients, email can be sent directly and by pass the queue.
+This is configurable in the plugin settings in the BE.
 
-* Create a content element of type "mailing" in the Backend.
-* Add some TypoScript configuration to declare a new HTML template.
-* Adjust your template in particular the form. Use a form generator of your choice.
-* Your form is basically ready. 
+![](https://raw.githubusercontent.com/Ecodev/mailing/master/Documentation/Frontend-01.png)
 
 Project info and releases
 -------------------------
 
-<!--Stable version:-->
-<!--http://typo3.org/extensions/repository/view/mailing-->
+Stable version:
+http://typo3.org/extensions/repository/view/mailing
 
 Development version:
 https://github.com/Ecodev/mailing
@@ -46,5 +46,4 @@ Configuration
 
 The plugin can be configured in TypoScript. Settings in the BE could override the TS value.
 
-
-The Recipient list defined as Vidi selection - by
+The Recipient list is defined in the FE module, powered by Vidi.

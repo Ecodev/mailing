@@ -2,7 +2,7 @@
 
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Mailing list',
-    'description' => 'Define and assign list of recipients in the plugin settings. Users can send bunch of messages to them on the FE.',
+    'description' => 'Authenticated FE users can send bunch of messages to a list of recipients. This list is defined as a dynamic selection in a FE module (Vidi).',
     'category' => 'plugin',
     'author' => 'Fabien Udriot',
     'author_email' => 'fabien@ecodev.ch',
