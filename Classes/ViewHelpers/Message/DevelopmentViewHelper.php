@@ -10,7 +10,7 @@ namespace Fab\Mailing\ViewHelpers\Message;
 
 use Fab\Messenger\Redirect\RedirectService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
+use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 /**
  * View helper to some honey pot field.
