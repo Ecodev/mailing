@@ -9,6 +9,7 @@ namespace Fab\Mailing\ViewHelpers\Message;
  */
 
 use Fab\Messenger\Redirect\RedirectService;
+use TYPO3\CMS\Core\Core\Environment;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
@@ -19,7 +20,6 @@ class DevelopmentViewHelper extends AbstractViewHelper
 {
 
     /**
-     * @throws \TYPO3\CMS\Fluid\Core\ViewHelper\Exception\InvalidVariableException
      * @return string
      * @throws \InvalidArgumentException
      * @throws \Fab\Messenger\Exception\InvalidEmailFormatException
@@ -35,7 +35,7 @@ class DevelopmentViewHelper extends AbstractViewHelper
 
             $output = sprintf(
                 "<pre style='clear: both'>%s CONTEXT<br /> %s %s</pre>",
-                strtoupper((string)GeneralUtility::getApplicationContext()),
+                strtoupper((string)Environment::getContext()),
                 '<br />- All emails will be redirected to ' . implode(', ', array_keys($redirectTo)) . '.',
                 $this->isSenderOk($settings) ? '' : '<br/>- ATTENTION! No sender could be found. This will be a problem when sending emails.'
             );
@@ -53,7 +53,7 @@ class DevelopmentViewHelper extends AbstractViewHelper
     }
 
     /**
-     * @return RedirectService
+     * @return object|RedirectService
      * @throws \InvalidArgumentException
      */
     protected function getRedirectService() {
