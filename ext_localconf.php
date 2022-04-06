@@ -1,4 +1,8 @@
 <?php
+
+use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+
 if (!defined('TYPO3_MODE')) {
     die ('Access denied.');
 }
@@ -20,8 +24,10 @@ if (!defined('TYPO3_MODE')) {
 
 $configuration = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['mailing']);
 
-if (false === isset($configuration['autoload_typoscript']) || true === (bool)$configuration['autoload_typoscript']) {
 
+// Possible Static TS loading
+$isTypoScriptAutoLoad = (bool)GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('mailing', 'autoload_typoscript');
+if ($isTypoScriptAutoLoad) {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScript(
         'mailing',
         'constants',

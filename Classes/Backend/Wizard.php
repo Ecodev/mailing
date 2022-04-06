@@ -8,34 +8,31 @@ namespace Fab\Mailing\Backend;
  * LICENSE.md file that was distributed with this source code.
  */
 
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+use TYPO3\CMS\Backend\Wizard\NewContentElementWizardHookInterface;
 
 /**
  * Class that adds the wizard icon.
  */
-class Wizard
+class Wizard implements NewContentElementWizardHookInterface
 {
 
     /**
-     * Processing the wizard items array
-     *
-     * @param array $wizardItems : The wizard items
-     * @return array
+     * @param array $items
+     * @param \TYPO3\CMS\Backend\Controller\ContentElement\NewContentElementController
+     * @return void
      */
-    function proc($wizardItems)
+    public function manipulateWizardItems(&$wizardItems, &$parentObject)
     {
         $wizardItems['plugins_tx_mailing_message'] = array(
-            'icon' => 'EXT:mailing/Resources/Public/Images/Mailing.png',
+            'iconIdentifier' => 'tx-mailing-icon',
             'title' => $this->getLanguageService()->sL('LLL:EXT:mailing/Resources/Private/Language/locallang.xlf:wizard.title'),
             'description' => $this->getLanguageService()->sL('LLL:EXT:mailing/Resources/Private/Language/locallang.xlf:wizard.description'),
             'params' => '&defVals[tt_content][CType]=list&defVals[tt_content][list_type]=mailing_messages'
         );
-
-        return $wizardItems;
     }
 
     /**
-     * @return \TYPO3\CMS\Lang\LanguageService
+     * @return \TYPO3\CMS\Core\Localization\LanguageService
      */
     protected function getLanguageService()
     {

@@ -18,8 +18,10 @@
 			"Fab\\Mailing\\": "Classes/"
 		}
 	},
-	"replace": {
-		"typo3-ter/mailing": "self.version"
+	"require": {
+		"typo3/cms-core": "^11.0",
+		"fab/vidi": "*",
+		"fab/messenger": "*"
 	},
 	"extra": {
 		"typo3/cms": {

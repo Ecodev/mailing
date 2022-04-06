@@ -14,7 +14,6 @@ use Fab\Vidi\Domain\Repository\ContentRepositoryFactory;
 use Fab\Vidi\Domain\Repository\SelectionRepository;
 use Fab\Vidi\Persistence\Matcher;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
 
 /**

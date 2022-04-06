@@ -8,22 +8,4 @@ $EM_CONF[$_EXTKEY] = [
     'module' => '',
     'state' => 'beta',
     'version' => '0.5.0-dev',
-    'autoload' => [
-        'psr-4' => ['Fab\\Mailing\\' => 'Classes']
-    ],
-    'constraints' =>
-        [
-            'depends' =>
-                [
-                    'typo3' => '9.5.0-10.4.99',
-                    'vidi' => '4-0.0-0.0.0',
-                    'messenger' => '2.0.0-0.0.0',
-                ],
-            'conflicts' =>
-                [
-                ],
-            'suggests' =>
-                [
-                ],
-        ]
 ];
