@@ -5,7 +5,6 @@ $EM_CONF[$_EXTKEY] = [
     'category' => 'plugin',
     'author' => 'Fabien Udriot',
     'author_email' => 'fabien@ecodev.ch',
-    'module' => '',
-    'state' => 'beta',
-    'version' => '0.5.0-dev',
+    'state' => 'stable',
+    'version' => '1.0.0',
 ];

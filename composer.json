@@ -18,14 +18,14 @@
 			"Fab\\Mailing\\": "Classes/"
 		}
 	},
-	"require": {
-		"typo3/cms-core": "^11.0",
-		"fab/vidi": "*",
-		"fab/messenger": "*"
-	},
 	"extra": {
 		"typo3/cms": {
 			"extension-key": "mailing"
 		}
+	},
+	"require": {
+		"typo3/cms-core": "^11.0",
+		"fab/vidi": "*",
+		"fab/messenger": "*"
 	}
 }
