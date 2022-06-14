@@ -7,36 +7,36 @@ if (!defined('TYPO3_MODE')) {
     die ('Access denied.');
 }
 
+(static function (): void {
 
-\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-    'Fab.mailing',
-    'Message',
-    [
-        'Message' => 'compose, send, feedback',
+    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+        'Fab.mailing',
+        'Message',
+        [
+            'Message' => 'compose, send, feedback',
 
-    ],
-    // non-cacheable actions
-    [
-        'Message' => 'compose, send, feedback',
-    ]
-);
-
-
-$configuration = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['mailing']);
-
-
-// Possible Static TS loading
-$isTypoScriptAutoLoad = (bool)GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('mailing', 'autoload_typoscript');
-if ($isTypoScriptAutoLoad) {
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScript(
-        'mailing',
-        'constants',
-        '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:mailing/Configuration/TypoScript/constants.txt">'
+        ],
+        // non-cacheable actions
+        [
+            'Message' => 'compose, send, feedback',
+        ]
     );
 
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScript(
-        'mailing',
-        'setup',
-        '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:mailing/Configuration/TypoScript/setup.txt">'
-    );
-}
+    // Possible Static TS loading
+    $isTypoScriptAutoLoad = (bool)GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('mailing', 'autoload_typoscript');
+    if ($isTypoScriptAutoLoad) {
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScript(
+            'mailing',
+            'constants',
+            '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:mailing/Configuration/TypoScript/constants.txt">'
+        );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScript(
+            'mailing',
+            'setup',
+            '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:mailing/Configuration/TypoScript/setup.txt">'
+        );
+    }
+
+})();
+
