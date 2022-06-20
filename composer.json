@@ -4,7 +4,7 @@
 	"description": "Define and assign list of recipients in the plugin settings. Users can send bunch of messages to them on the FE.",
 	"homepage": "https://github.com/Ecodev/mailing",
 	"license": [
-		"GPL-2.0+"
+		"GPL-2.0-or-later"
 	],
 	"keywords": [
 		"TYPO3 CMS",
